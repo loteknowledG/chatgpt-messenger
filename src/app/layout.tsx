@@ -1,3 +1,4 @@
+import SideBar from '@/components/SideBar'
 import './globals.css'
 
 export const metadata = {
@@ -16,6 +17,9 @@ export default function RootLayout({
       <body>
         <div className="flex">
           {/* sidebar */}
+          <div className="bg-[#2021231 max-w-xs h-screen overflow-y-auto md:min-w-[20rem]">
+            <SideBar />
+          </div>
           {/* clientProvider - Notification */}
           <div className="bg-[#343541] flex-1">{children}</div>
         </div>
