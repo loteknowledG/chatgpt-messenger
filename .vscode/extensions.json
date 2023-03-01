@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "mightbesimon.emoji-icons",
+    "helixquar.asciidecorator",
+    "aliariff.auto-add-brackets",
+    "mgmcdermott.vscode-language-babel",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "max-ss.cyberpunk",
+    "oderwat.indent-rainbow",
+    "visualstudioexptteam.vscodeintellicode",
+    "christian-kohler.path-intellisense",
+    "csstools.postcss",
+    "ms-vscode.powershell",
+    "0xfedev.vs-chatgpt"
+  ]
+}
