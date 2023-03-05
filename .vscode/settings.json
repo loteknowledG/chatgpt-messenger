@@ -1,7 +1,12 @@
 {
-  "typescript.tsdk": "node_modules\\typescript\\lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "isGitignoreExtActive": true,
   "cSpell.words": [
-    "heroicons"
-  ]
+    "chatgpt",
+    "firestore",
+    "heroicons",
+    "Lotek",
+    "openai"
+  ],
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
