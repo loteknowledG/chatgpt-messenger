@@ -6,6 +6,7 @@ import { useCollection } from "react-firebase-hooks/firestore"
 import { db } from "../../firebase"
 import ChatRow from "./ChatRow"
 import NewChat from "./NewChat"
+import ModelSelection from "./ModelSelection"
 
 export default function SideBar() {
   const { data: session } = useSession()
@@ -20,11 +21,22 @@ export default function SideBar() {
     <div className="p-2 flex flex-col h-screen">
       <div className="flex-1">
         <NewChat />
-        <div>{/* Model Selection */}</div>
-        {/* Map through the ChatRows */}
-        {chats?.docs.map(chat => (
-          <ChatRow key={chat.id} id={chat.id} />
-        ))}
+        <div className="hidden sm:inline">
+          <ModelSelection />
+        </div>
+        <div className="flex flex-col space-y-2 my-2">
+
+          {loading && ( 
+            <div className="animate-pulse text-center text-white">
+              <p>Loading chats...</p>
+            </div>
+          )}
+        
+          {/* Map through the ChatRows */}
+          {chats?.docs.map(chat => (
+            <ChatRow key={chat.id} id={chat.id} />
+          ))}
+        </div>
       </div>
       {session && 
         <img onClick={() => signOut()} 
