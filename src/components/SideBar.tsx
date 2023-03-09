@@ -20,29 +20,27 @@ export default function SideBar() {
   return (
     <div className="p-2 flex flex-col h-screen">
       <div className="flex-1">
-        <NewChat />
         <div className="hidden sm:inline">
+          <NewChat />
           <ModelSelection />
-        </div>
-        <div className="flex flex-col space-y-2 my-2">
-
+          <div className="flex flex-col space-y-2 my-2">
           {loading && ( 
             <div className="animate-pulse text-center text-white">
               <p>Loading chats...</p>
             </div>
           )}
-        
           {/* Map through the ChatRows */}
           {chats?.docs.map(chat => (
             <ChatRow key={chat.id} id={chat.id} />
           ))}
+          </div>
         </div>
-      </div>
-      {session && 
-        <img onClick={() => signOut()} 
-          src={session.user?.image!} 
-          alt="profile picture" 
-          className="h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50" />}
+        {session && 
+          <img onClick={() => signOut()} 
+            src={session.user?.image!} 
+            alt="profile picture" 
+            className="h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50" />}
+        </div>
     </div>
   )
 }

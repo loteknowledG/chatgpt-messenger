@@ -5,6 +5,7 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore"
 import { useSession } from "next-auth/react"
 import { FormEvent, useState } from "react"
 import { toast } from "react-hot-toast"
+import NewChat from "./NewChat"
 import ModelSelection from "./ModelSelection"
 import useSWR from 'swr'
 
@@ -82,6 +83,7 @@ export default function ChatInput ({ chatId }: Props) {
         </button>
       </form>
       <div className="md:hidden">
+        <NewChat />
         <ModelSelection />
       </div>
     </div>
