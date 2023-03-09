@@ -20,9 +20,11 @@ export default function SideBar() {
   return (
     <div className="p-2 flex flex-col h-screen">
       <div className="flex-1">
-        <div className="hidden sm:inline">
+        
           <NewChat />
-          <ModelSelection />
+          <div className="hidden sm:inline">
+            <ModelSelection />
+          </div>
           <div className="flex flex-col space-y-2 my-2">
           {loading && ( 
             <div className="animate-pulse text-center text-white">
@@ -34,7 +36,7 @@ export default function SideBar() {
             <ChatRow key={chat.id} id={chat.id} />
           ))}
           </div>
-        </div>
+        
         {session && 
           <img onClick={() => signOut()} 
             src={session.user?.image!} 

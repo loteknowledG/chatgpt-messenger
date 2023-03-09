@@ -5,7 +5,6 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore"
 import { useSession } from "next-auth/react"
 import { FormEvent, useState } from "react"
 import { toast } from "react-hot-toast"
-import NewChat from "./NewChat"
 import ModelSelection from "./ModelSelection"
 import useSWR from 'swr'
 
@@ -75,7 +74,6 @@ export default function ChatInput ({ chatId }: Props) {
           type="text" 
           placeholder="Type your message here..."
         />
-
         <button type="submit"
           disabled={!prompt || !session} 
           className="bg-[#11A37E] hover:opacity-50 text-white font-bold px-4 py-2 rounded disabled:bg-gray-300 disabled:cursor-not-allowed">
@@ -83,7 +81,6 @@ export default function ChatInput ({ chatId }: Props) {
         </button>
       </form>
       <div className="md:hidden">
-        <NewChat />
         <ModelSelection />
       </div>
     </div>
