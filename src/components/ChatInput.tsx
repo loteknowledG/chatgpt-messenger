@@ -74,6 +74,7 @@ export default function ChatInput ({ chatId }: Props) {
           type="text" 
           placeholder="Type your message here..."
         />
+
         <button type="submit"
           disabled={!prompt || !session} 
           className="bg-[#11A37E] hover:opacity-50 text-white font-bold px-4 py-2 rounded disabled:bg-gray-300 disabled:cursor-not-allowed">

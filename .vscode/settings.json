@@ -5,9 +5,11 @@
     "Colour",
     "davinci",
     "firestore",
+    "flowbite",
     "heroicons",
     "Lotek",
-    "openai"
+    "openai",
+    "tailwindcss"
   ],
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "typescript.enablePromptUseWorkspaceTsdk": true

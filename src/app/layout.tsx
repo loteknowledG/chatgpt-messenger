@@ -1,5 +1,6 @@
 import { SessionProvider } from '@/components/SessionProvider'
 import SideBar from '@/components/SideBar'
+import SideBar2 from '@/components/SideBar2'
 import { getServerSession } from 'next-auth'
 import { authOptions } from "../pages/api/auth/[...nextauth]"
 import Login from '@/components/Login'

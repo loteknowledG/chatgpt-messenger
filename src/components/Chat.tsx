@@ -18,7 +18,7 @@ export default function Chat ({ chatId }: Props) {
   ))
 
   return (
-    <div className="flex-1 overflow-y-auto overflow-x-hidden flex-col-reverse">
+    <div className="flex-1 overflow-y-auto overflow-x-auto flex-col-reverse">
       {messages?.empty && (
         <>
           <p className="mt-10 text-center text-white">
