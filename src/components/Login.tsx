@@ -11,7 +11,7 @@ export default function Login() {
         height={300}
         alt="logo"
       /> 
-      <button onClick={() => signIn("google")} className="text-white font-bond text-3xl animate-pulse">Sign In to use ChatGPT</button>
+      <button onClick={() => signIn("google")} className="text-white font-bond text-3xl animate-pulse">Sign In to use n00sphere</button>
     </div>
   )
 }

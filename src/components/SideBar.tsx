@@ -18,7 +18,6 @@ export default function SideBar() {
   )
   
   return (
-    
     <div className="p-2 flex flex-col h-screen">
       <div id="default-sidebar" className="flex-1">
         <NewChat />
@@ -26,13 +25,11 @@ export default function SideBar() {
           <ModelSelection />
         </div>
         <div className="flex flex-col space-y-2 my-2">
-
           {loading && ( 
             <div className="animate-pulse text-center text-white">
               <p>Loading chats...</p>
             </div>
           )}
-        
           {/* Map through the ChatRows */}
           {chats?.docs.map(chat => (
             <ChatRow key={chat.id} id={chat.id} />

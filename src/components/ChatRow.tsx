@@ -25,7 +25,7 @@ export default function ChatRow ({id}: Props) {
   useEffect(() => {
     if (!pathname) return
     setActive(pathname.includes(id))
-  }, [pathname])
+  }, [id, pathname])
 
   const removeChat = async() => {
     await deleteDoc(doc(db, "users", session?.user?.email!, "chats", id))
