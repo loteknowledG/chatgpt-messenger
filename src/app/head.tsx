@@ -6,7 +6,6 @@ export default function Head() {
       <meta content="width=device-width, 
       initial-scale=1" name="viewport" />
       <link rel="icon" href="/favicon.ico" />
-      <Script src="../path/to/flowbite/dist/flowbite.min.js"></Script>
     </>
   )
 } 
