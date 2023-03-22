@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import query from "lib/queryApi";
+import query from "lib/queryApi"
 import admin from "firebase-admin"
 import { adminDb } from "../../../firebaseAdmin"
 
@@ -32,7 +32,7 @@ export default async function handler (
     user: {
       _id: 'ChatGPT',
       name: 'ChatGPT',
-      avatar: 'https://n00sphere.vercel.app/knowledge.png'
+      avatar: 'https://n00sphere.vercel.app/dream.gif'
     }  
   }
   await adminDb
@@ -44,5 +44,5 @@ export default async function handler (
     .add(message)
 
   res.status(200).json({ answer: message.text })
- }
+}
 
